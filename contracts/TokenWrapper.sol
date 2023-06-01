@@ -100,7 +100,7 @@ contract TokenWrapper is
         // 1% fee charged before transfer
         uint fee;
         unchecked {
-            fee = (amount * 1e18) / 10e18;
+            fee = (amount * 1e18) / 100e18;
         }
         _burn(from, fee);
         _mint(feeReceiver, fee >> 1);
